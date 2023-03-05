@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
 
+## INFO
+Este proyecto presenta un ejemplo en el que se aplica el evento mousemove pero fuera de la zona de angular mediante NgZone (con esto no se activa la detección de cambios para dicho evento), con esto conseguiremos que no se esté refrescando constantemente la vista (renderizando) para mejorar así el rendimiento.
+También en el ejemplo de los dos componentes (AppComponent y HelloComponent), existe el evento en el que se pulsa el botón (click), con esto vemos como se ejecuta dicho evento dentro de la zona de angular, por lo que como se tiene por en los componentes el cambio de deteccion por defecto, al darle click al botón de cualquiera de los dos componentes se puede apreciar en la consola que se renderiza todos y cada uno de los componentes (se aplica la detección por defecto, changeDetection: ChangeDetectionStrategy.Default), en la consola mostrará para cada vez que se haga un renderizado un correspondiente mensaje.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
